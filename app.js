@@ -34,7 +34,7 @@ var createNewTaskElement = function (taskString) {
   var deleteButtonImg = document.createElement("img");//delete button image
 
   label.innerText = taskString;
-  label.className = 'sub-title in-action__sub-title';
+  label.className = "sub-title in-action__sub-title";
 
   //Each elements, needs appending
   checkBox.type = "checkbox";
@@ -47,7 +47,7 @@ var createNewTaskElement = function (taskString) {
   editButton.className = "edit-btn";
 
   deleteButton.className = "delete-btn in-action__delete-btn";
-  deleteButtonImg.src = './remove.svg';
+  deleteButtonImg.src = "./remove.svg";
   deleteButtonImg.className = "in-action__img";
   deleteButton.appendChild(deleteButtonImg);
 
@@ -159,7 +159,7 @@ var bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
 //select ListItems children
   var checkBox = taskListItem.querySelector("input[type=checkbox]");
   var editButton = taskListItem.querySelector("button.edit-btn");
-  var deleteButton = taskListItem.querySelector("button.delete");
+  var deleteButton = taskListItem.querySelector("button.delete-btn");
 
 
   //Bind editTask to edit button.
