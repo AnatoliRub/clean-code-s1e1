@@ -1,19 +1,61 @@
-<html>
-<HEAD><title>Todo App</title>
-<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.css" type="text/css" MEDIA="screen" charset="utf-8">
-</HEAD>
-<body>
-<div class="aaa"><img src="./eisenhower-matrix.jpg"><a class='more_inf' href="https://goal-life.com/page/method/matrix-eisenhower">Want more details&quest;</a></div>
-<div class="centered-main-page-element"><p id='topSectionForAddingElementToList'><label for="new-task">Add Item</label><div class="task-row-wrapper"><input id='new-task'class="task" type="text"><button>Add</button></div>
-</p><h3>Todo</h3>
-<ul id='incompleteTasks'>
-<li><input type='checkbox'><label class="task">Pay Bills</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button></li>
-<li class="editMode"><input type="checkbox"><label class="task">Go Shopping</label><input type="text" value="Go Shopping" class="task"><button class='edit'>Save</button><button class="delete"><img src="./remove.svg"></button></li>
-</ul><h3>Completed</h3><ul id="completed-tasks"><li><input type="checkbox" checked><label class="task">See the Doctor</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button>
-</li>
-</ul>
-</div>
-<script type="text/javascript" SRC="app.js"></script>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Todo App</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" media="screen">
+  </head>
+  <body class="body">
+    <header class="header">
+      <img class="header__img" src="./eisenhower-matrix.jpg" alt="eisenhower-matrix">
+      <a class="header__link-inf" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+    </header>
+    <main class="app-wrap">
+      <section id="add-case" class="add-case">
+        <label class="title add-case__title" for="new-task">Add Item</label>
+        <div class="add-case__wrapper">
+          <input class="input add-case__input" id="new-task" type="text">
+          <button class="add-btn add-case__add-btn">Add</button>
+        </div>
+      </section>
+      <section class="in-action">
+        <h2 class="title in-action__title">Todo</h2>
+        <ul class="in-action__list" id="in-action">
+          <li class="in-action__item">
+            <input class="checkbox in-action__checkbox" type="checkbox">
+            <label class="sub-title in-action__sub-title">Pay Bills</label>
+            <input type="text" class="input in-action__input">
+            <button class="edit-btn in-action__edit-btn">Edit</button>
+            <button class="delete-btn in-action__delete-btn">
+              <img class="in-action__img" src="./remove.svg" alt="remove">
+            </button>
+          </li>
+          <li class="in-action__item edit-mode">
+            <input class="checkbox in-action__checkbox" type="checkbox">
+            <label class="sub-title in-action__sub-title">Go Shopping</label>
+            <input class="input in-action__input" type="text" value="Go Shopping">
+            <button class="edit-btn in-action__edit-btn">Save</button>
+            <button class="delete-btn in-action__delete-btn">
+              <img class="in-action__img" src="./remove.svg" alt="remove">
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="complete-case">
+        <h2 class="title complete-case__title">Completed</h2>
+        <ul class="complete-case__list" id="completed-tasks">
+          <li class="complete-case__item">
+            <input class="checkbox complete-case__checkbox" type="checkbox" checked>
+            <label class="sub-title complete-case__sub-title">See the Doctor</label>
+            <input class="input complete-case__input" type="text">
+            <button class="edit-btn complete-case__edit-btn">Edit</button>
+            <button class="delete-btn complete-case__delete-btn">
+              <img class="complete-case__img" src="./remove.svg" alt="remove">
+            </button>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
 </html>
